@@ -1,4 +1,5 @@
 #include "monty.h"
+val_t sx;
 /**
  * main - monty program
  * @argc: num of arguments
