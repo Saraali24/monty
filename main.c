@@ -19,8 +19,7 @@ instruction_t my_opcode[] = {{"push", fun_push},
 {"add", fun_add},
 {"nop", fun_nop},
 {"sub", fun_sub}};
-stack_t *stack;
-stack = NULL;
+stack_t *stack = NULL;
 if (argc != 2)
 _error_argc();
 sx.file = fopen(argv[1], "r");
