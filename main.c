@@ -1,18 +1,9 @@
 #include "monty.h"
-val_t sx;
-/**
- * main - monty program
- * @argc: num of arguments
- * @argv: argument vectors
- * Return: 0
- */
 int main(int argc, char **argv)
 {
-char line[100];
-char *copy_ptr, *command;
+char line[100], *copy_ptr, *command;
 int i, check;
 unsigned int count = 0;
-
 instruction_t my_opcode[] = {{"push", fun_push},
 {"pall", fun_pall},
 {"pint", fun_pint},
@@ -21,16 +12,10 @@ instruction_t my_opcode[] = {{"push", fun_push},
 {"add", fun_add},
 {"nop", fun_nop},
 {"sub", fun_sub}};
-
 stack_t *stack;
 stack = NULL;
-
-
 if (argc != 2)
-{
 _error_argc();
-}
-
 sx.file = fopen(argv[1], "r");
 if (sx.file == NULL)
 _error_file(argv[1]);
@@ -47,7 +32,6 @@ my_opcode[i].f(&stack, count);
 else
 _error_inst(count, copy_ptr);
 }
-
 check = fclose(sx.file);
 if (check == -1)
 exit(-1);
