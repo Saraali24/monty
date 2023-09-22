@@ -1,4 +1,10 @@
 #include "monty.h"
+/**
+ * main - monty program
+ * @argc: num of arguments
+ * @argv: argument vectors
+ * Return: 0
+ */
 int main(int argc, char **argv)
 {
 char line[100], *copy_ptr, *command;
